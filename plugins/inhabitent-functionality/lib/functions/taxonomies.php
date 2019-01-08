@@ -37,11 +37,22 @@ function product_taxonomy() {
 		'hierarchical'               => true,
 		'public'                     => true,
 		'show_ui'                    => true,
+		'show_in_rest'         		 => true,
+		'show_in_quick_edit'         => true,
+		'meta_box_cb'                => true,
 		'show_admin_column'          => true,
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
+		'query_var' 				 => true,
 	);
 	register_taxonomy( 'product-type', array( 'product' ), $args );
 
 }
+function remove_default_taxonomies_product() {
+	unregister_taxonomy_for_object_type('post_tag', 'product');
+	unregister_taxonomy_for_object_type( 'category', 'product');
+}
+
+
 add_action( 'init', 'product_taxonomy', 0 );
+add_action('init', 'remove_default_taxonomies_product', 5 );

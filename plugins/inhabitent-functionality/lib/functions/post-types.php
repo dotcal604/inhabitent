@@ -45,7 +45,7 @@ function create_product_post_type() {
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'thumbnail', 'comments', 'custom-fields' ),
 		'taxonomies'            => array( 'category', 'post_tag' ),
-        'hierarchical'          => false,
+        'hierarchical'          => true,
         'show_in_rest'          => true,
 		'public'                => true,
 		'show_ui'               => true,
@@ -60,9 +60,12 @@ function create_product_post_type() {
         'publicly_queryable'    => true,
         'template_lock' => 'all',
         'template' => array(
+			array( 'core/image', array(
+            ) ),
             array( 'core/paragraph', array(
                 'placeholder' => 'Add product description',
-            ) ),
+			) ),
+			
         ),
 	);
 	register_post_type( 'product', $args );
