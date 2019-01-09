@@ -31,6 +31,8 @@ a {
 	display: block;
 	float: left;
 	width: 100%;
+	font-family: $font__accent;
+	text-transform: uppercase;
 
 	ul {
 		display: none;
@@ -79,6 +81,7 @@ a {
 	li {
 		float: left;
 		position: relative;
+		padding-left: 1.5rem;
 
 		&:hover > a,
 		&.focus > a {

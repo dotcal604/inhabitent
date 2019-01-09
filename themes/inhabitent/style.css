@@ -225,6 +225,46 @@ th {
 /*--------------------------------------------------------------
 # Embedded Fonts
 --------------------------------------------------------------*/
+@font-face {
+  font-family: 'Merriweather';
+  src: url("../../fonts/Merriweather-BoldItalic.eot");
+  src: url("../../fonts/Merriweather-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../../fonts/Merriweather-BoldItalic.woff2") format("woff2"), url("../../fonts/Merriweather-BoldItalic.woff") format("woff"), url("../../fonts/Merriweather-BoldItalic.ttf") format("truetype"), url("../../fonts/Merriweather-BoldItalic.svg#Merriweather-BoldItalic") format("svg");
+  font-weight: bold;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url("../../fonts/Merriweather-Bold.eot");
+  src: url("../../fonts/Merriweather-Bold.eot?#iefix") format("embedded-opentype"), url("../../fonts/Merriweather-Bold.woff2") format("woff2"), url("../../fonts/Merriweather-Bold.woff") format("woff"), url("../../fonts/Merriweather-Bold.ttf") format("truetype"), url("../../fonts/Merriweather-Bold.svg#Merriweather-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url("../../fonts/Merriweather-LightItalic.eot");
+  src: url("../../fonts/Merriweather-LightItalic.eot?#iefix") format("embedded-opentype"), url("../../fonts/Merriweather-LightItalic.woff2") format("woff2"), url("../../fonts/Merriweather-LightItalic.woff") format("woff"), url("../../fonts/Merriweather-LightItalic.ttf") format("truetype"), url("../../fonts/Merriweather-LightItalic.svg#Merriweather-LightItalic") format("svg");
+  font-weight: 300;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url("../../fonts/Merriweather-Light.eot");
+  src: url("../../fonts/Merriweather-Light.eot?#iefix") format("embedded-opentype"), url("../../fonts/Merriweather-Light.woff2") format("woff2"), url("../../fonts/Merriweather-Light.woff") format("woff"), url("../../fonts/Merriweather-Light.ttf") format("truetype"), url("../../fonts/Merriweather-Light.svg#Merriweather-Light") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Novecento';
+  src: url("../../fonts/Novecentosanswide-DemiBold.eot") format("embedded-opentype"), url("../../fonts/Novecentosanswide-DemiBold.woff2") format("woff2"), url("../../fonts/Novecentosanswide-DemiBold.woff") format("woff"), url("../../fonts/Novecentosanswide-DemiBoldt.ttf") format("truetype"), url("../../fonts/Novecentosanswide-DemiBold.svg") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Novecento';
+  src: url("../../fonts/Novecentosanswide-Normal.eot") format("embedded-opentype"), url("../../fonts/Novecentosanswide-Normal.woff") format("woff"), url("../../fonts/Novecentosanswide-Normal.woff2") format("woff2"), url("../../fonts/Novecentosanswide-Normal.ttf") format("truetype"), url("../../fonts/Novecentosanswide-Normal.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -233,11 +273,12 @@ button,
 input,
 select,
 textarea {
-  color: #404040;
-  font-family: sans-serif;
+  color: pink;
+  font-family: "Merriweather";
   font-size: 16px;
   font-size: 1rem;
-  line-height: 1.5; }
+  line-height: 1.75;
+  font-size: 16px; }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
@@ -255,22 +296,6 @@ blockquote {
 
 address {
   margin: 0 0 1.5rem; }
-
-pre {
-  background: #eee;
-  font-family: "Courier 10 Pitch", Courier, monospace;
-  font-size: 15px;
-  font-size: 0.9375rem;
-  line-height: 1.6;
-  margin-bottom: 1.6rem;
-  max-width: 100%;
-  overflow: auto;
-  padding: 1.6rem; }
-
-code, kbd, tt, var {
-  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-  font-size: 15px;
-  font-size: 0.9375rem; }
 
 abbr, acronym {
   border-bottom: 1px dotted #666;
@@ -416,6 +441,28 @@ textarea {
   width: 100%; }
 
 /*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.header-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  position: absolute; }
+
+.title-logo {
+  background-image: url("../../images/logos/inhabitent-logo-tent-white.svg");
+  text-indent: 1000%;
+  background-repeat: no-repeat;
+  background-size: 50px 30px; }
+
+/*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
 /* Links */
@@ -435,7 +482,9 @@ a {
   clear: both;
   display: block;
   float: left;
-  width: 100%; }
+  width: 100%;
+  font-family: "Novecento";
+  text-transform: uppercase; }
   .main-navigation ul {
     display: none;
     list-style: none;
@@ -462,7 +511,8 @@ a {
       left: auto; }
   .main-navigation li {
     float: left;
-    position: relative; }
+    position: relative;
+    padding-left: 1.5rem; }
   .main-navigation a {
     display: block;
     text-decoration: none; }
@@ -617,6 +667,10 @@ a {
   margin-top: 0;
   padding: 0; }
 
+.content-area {
+  max-width: 1120px;
+  backgrounp-color: #fff; }
+
 /* Make sure embeds and iframes fit their containers. */
 embed,
 iframe,
@@ -670,3 +724,32 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+.home-hero {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), #969696 url(../../images/home-hero.jpg) no-repeat top;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.4)), #969696 url(../../images/home-hero.jpg) no-repeat top;
+  background-size: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-size: cover,cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  position: relative; }
+
+.hero-logo {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 150px; }

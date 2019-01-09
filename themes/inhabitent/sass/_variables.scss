@@ -1,17 +1,20 @@
 // Structure
 
 $base__space-unit: 1.5rem;
+$base__solid-border: 1px solid #e1e1e1;
+$base__dashed-border: 1px dashed #c8c8c8;
+$site_width: 1120px;
 
 // Colors
 
 $color__background-body: #fff;
-$color__text-main: #404040;
+$color__text-main: pink;
 
 $color__background-screen: #f1f1f1;
 $color__text-screen: #21759b;
 
 $color__background-hr: #ccc;
-$color__background-pre: #eee;
+$color__background-pre: #eee;;
 $color__background-ins: #fff9c0;
 $color__border-abbr: #666;
 
@@ -21,8 +24,7 @@ $color__link-hover: midnightblue;
 
 // Typography
 
-$font__main: sans-serif;
-$font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-$font__pre: "Courier 10 Pitch", Courier, monospace;
-$font__line-height-body: 1.5;
-$font__line-height-pre: 1.6;
+$font__main: 'Merriweather';
+$font__accent: 'Novecento';
+$font__line-height-body: 1.75;
+$font__base-size: 16px;

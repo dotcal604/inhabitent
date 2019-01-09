@@ -11,6 +11,11 @@
 	padding: 0;
 }
 
+.content-area {
+	max-width: 1120px;
+	backgrounp-color: $color__background-body; 
+}
+
 /* Make sure embeds and iframes fit their containers. */
 
 embed,
